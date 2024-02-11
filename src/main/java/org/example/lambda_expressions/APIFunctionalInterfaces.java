@@ -27,7 +27,7 @@ public class APIFunctionalInterfaces {
     }
 
     public void consumer() {
-        Consumer<String> consumer = s -> System.out.println(s);
+        Consumer<String> consumer = System.out::println;
         consumer.accept("First case of using consumer");
 
         List<String > names = new ArrayList<>();
@@ -40,13 +40,24 @@ public class APIFunctionalInterfaces {
     public void biConsumer() {
         HashMap<String,String> mapCapabilities = new HashMap<String,String>();
 
-        BiConsumer<String,String> biConsumer = (key,value) -> mapCapabilities.put(key,value);
+        BiConsumer<String,String> biConsumer = mapCapabilities::put;
 
         biConsumer.accept("Basketball","Lebron James");
         biConsumer.accept("Football","Cristiano Ronaldo");
 
         System.out.println(mapCapabilities);
 
+    }
+
+    public void function() {
+        Function<String,Integer> function = String::length;
+        System.out.println("Using Function, Length of String : " + function.apply("Santa-Klaus"));
+    }
+
+    public void biFunction() {
+        BiFunction<String,String,Integer> biFunction = (x,y) -> x.concat(y).length();
+
+        System.out.println("Using BiFunction, Length of concatenated strings are: " + biFunction.apply("Santa-","Klaus"));
     }
 
     public static void main(String[] args) {
@@ -56,5 +67,7 @@ public class APIFunctionalInterfaces {
         apiFunctionalInterfaces.supplier();
         apiFunctionalInterfaces.consumer();
         apiFunctionalInterfaces.biConsumer();
+        apiFunctionalInterfaces.function();
+        apiFunctionalInterfaces.biFunction();
     }
 }
