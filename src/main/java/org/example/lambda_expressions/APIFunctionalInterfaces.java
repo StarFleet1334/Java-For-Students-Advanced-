@@ -60,6 +60,17 @@ public class APIFunctionalInterfaces {
         System.out.println("Using BiFunction, Length of concatenated strings are: " + biFunction.apply("Santa-","Klaus"));
     }
 
+
+    public void unaryOperator() {
+        UnaryOperator<String> unaryOperator = name -> "My name is " + name;
+        System.out.println(unaryOperator.apply("Ilia"));
+    }
+
+    public void binaryOperator() {
+        BinaryOperator<String> binaryOperator = (name,age) -> "My name is " + name + ". I am " + age + " years old.";
+        System.out.println(binaryOperator.apply("Ilia","21"));
+    }
+
     public static void main(String[] args) {
         APIFunctionalInterfaces apiFunctionalInterfaces = new APIFunctionalInterfaces();
         apiFunctionalInterfaces.predicate();
@@ -69,5 +80,7 @@ public class APIFunctionalInterfaces {
         apiFunctionalInterfaces.biConsumer();
         apiFunctionalInterfaces.function();
         apiFunctionalInterfaces.biFunction();
+        apiFunctionalInterfaces.unaryOperator();
+        apiFunctionalInterfaces.binaryOperator();
     }
 }
