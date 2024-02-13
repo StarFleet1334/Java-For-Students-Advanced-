@@ -1,8 +1,10 @@
 package org.example.lambda_expressions;
 
-import java.util.function.Consumer;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.function.*;
+import java.util.stream.Stream;
 
 public class MethodReferences {
 
@@ -39,7 +41,51 @@ public class MethodReferences {
 
     }
 
+    public static void unBoundedMethodReference() {
+        // keyNote - Instance type is provided at run time
+
+        Function<String,Integer> lambda_first = (name) -> name.length();
+        Function<String,Integer> reference_first = String::length;
+
+        System.out.println("First Example: " + lambda_first.apply("Ilia"));
+        System.out.println("Second Example: " + reference_first.apply("Ilia"));
+
+
+        BiFunction<String, String,Integer> lambda_second = (firstName,lastName) -> (firstName.concat(lastName)).length();
+//        BiFunction<String,String,Integer> reference_second = String::concat; // This cannot happen
+        BiFunction<String,String,String> reference_second = String::concat;
+        System.out.println("Second Example: " + lambda_second.apply("Ilia","Lataria"));
+        System.out.println("Second Example: " + reference_second.apply("Ilia","Lataria"));
+    }
+
+    public static void staticMethodReference() {
+        // Static Method reference is still unbounded
+        Consumer<List<Integer>> lambda_first = (lst) -> Collections.sort(lst);
+        Consumer<List<Integer>> reference_first = Collections::sort;
+
+        List<Integer> lst = Arrays.asList(2,1,5,4,9);
+        lambda_first.accept(lst);
+        System.out.println(lst);
+
+        List<Integer> lst2 = Arrays.asList(8,12,4,3,7);
+        reference_first.accept(lst2);
+        System.out.println(lst2);
+    }
+
+
+    public static void constructorMethodReference() {
+        Supplier<StringBuilder> lambda_first = () -> new StringBuilder();
+        Supplier<StringBuilder> reference_first = StringBuilder::new;
+
+        StringBuilder first = lambda_first.get().append("Ilia").append(" Lataria");
+        System.out.println(first);
+        StringBuilder second = reference_first.get().append("Ilia").append(" Lataria");
+        System.out.println(second);
+    }
+
     public static void main(String[] args) {
-        boundMethodReferences();
+//        boundMethodReferences();
+//        staticMethodReference();
+        constructorMethodReference();
     }
 }
