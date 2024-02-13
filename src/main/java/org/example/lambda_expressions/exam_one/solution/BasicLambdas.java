@@ -38,7 +38,7 @@ public class BasicLambdas {
         System.out.println();
 
 
-        // Task 4
+        // Task 3
 
         Evaluate<Integer> evaluate = (x) -> x < 0;
         Predicate<Integer> predicate_lambda = evaluate::isNegative;
@@ -60,6 +60,13 @@ public class BasicLambdas {
         Person ann = new Person("Ann",13,1.4);
         System.out.println("Is a mike an adult ?  " + check(mike,(x) -> x.getAge() >= 18));
         System.out.println("Is a ann an adult ?  " + check(ann,(x) -> x.getAge() >= 18));
+        System.out.println();
+
+        // Task 4
+
+        Functionable<Integer,String> functionable = (x) -> "Number is: " + x;
+        Function<Integer,String> function = (x) -> functionable.applyThis(x);
+        System.out.println(function.apply(25));
         System.out.println();
 
         // Part 2
