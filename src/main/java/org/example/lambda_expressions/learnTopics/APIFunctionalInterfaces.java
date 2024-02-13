@@ -1,4 +1,4 @@
-package org.example.lambda_expressions;
+package org.example.lambda_expressions.learnTopics;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
