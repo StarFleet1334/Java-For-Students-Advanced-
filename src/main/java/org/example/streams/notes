@@ -1,0 +1,2 @@
+# Reductions are special type of terminal operation where ALL of the contents of the stream are combined into a single
+# primitive or Object e.g Long or Collection
