@@ -1,4 +1,4 @@
-package org.example.streams;
+package org.example.streams.terminal_operations;
 
 import java.util.Arrays;
 import java.util.Comparator;

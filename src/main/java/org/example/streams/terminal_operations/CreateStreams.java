@@ -1,4 +1,4 @@
-package org.example.streams;
+package org.example.streams.terminal_operations;
 
 import java.io.IOException;
 import java.nio.file.Files;
