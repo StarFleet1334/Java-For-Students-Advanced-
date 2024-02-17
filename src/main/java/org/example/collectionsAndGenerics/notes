@@ -1,0 +1,19 @@
+1. collection - lowercase 'c' represents any of the data structures in which
+                objects are stored and iterated over
+
+2. Collection - capital 'C'; this is java.util.Collection interface that the Set,List,Queue
+                interfaces extend
+
+3. Collections - capital 'C' and ends with 's'; this is java.util.Collections utility class
+                which contains lots of static methods for use with collections
+
+
+
+
+// Popular Factory Methods
+
+1. Arrays.asList(T...a) -> returns a fixed-size list; cannot add/delete elements but can
+                           replace elements
+2. List.of(T...elements) -> returns an immutable list containing elements specified
+3. List.copyOf(Collection<? extends E> coll) -> returns an immutable list containing the
+                        elements of the given Collection
