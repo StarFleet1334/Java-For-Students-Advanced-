@@ -10,10 +10,4 @@
 
 
 
-// Popular Factory Methods
 
-1. Arrays.asList(T...a) -> returns a fixed-size list; cannot add/delete elements but can
-                           replace elements
-2. List.of(T...elements) -> returns an immutable list containing elements specified
-3. List.copyOf(Collection<? extends E> coll) -> returns an immutable list containing the
-                        elements of the given Collection
