@@ -1,6 +1,7 @@
 package org.example.streams.intermediate_operations;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -24,7 +25,7 @@ public class SecondPart {
         List<String> list2 = Arrays.asList("mary","ann");
         Stream<List<String>> stream = Stream.of(list1,list2);
 
-        stream.flatMap(x -> x.stream())
+        stream.flatMap(Collection::stream)
                 .forEach(System.out::print);
 
         System.out.println();
