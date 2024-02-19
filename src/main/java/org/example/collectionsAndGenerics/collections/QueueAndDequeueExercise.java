@@ -1,4 +1,4 @@
-package org.example.collectionsAndGenerics;
+package org.example.collectionsAndGenerics.collections;
 
 import org.example.streams.exam.solution.Book;
 

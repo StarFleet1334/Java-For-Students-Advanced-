@@ -1,4 +1,4 @@
-package org.example.collectionsAndGenerics;
+package org.example.collectionsAndGenerics.collections;
 
 public class Contact {
     private int age;
