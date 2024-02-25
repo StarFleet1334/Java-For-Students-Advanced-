@@ -1,0 +1,18 @@
+JDCB (Java Database Connectivity) accesses data as rows and columns
+
+A relational database organises data into tables consisting of rows and columns.
+
+We use SQL (Structured Query Language) to interact with a relational database.
+
+
+ALSO in pom.xml add dependency:
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.28</version> <!-- Use the latest version here -->
+</dependency>
+
+
+
+and if you are running your application from command line:
+// java -cp .:mysql-connector-java-8.0.28.jar YourApplication
