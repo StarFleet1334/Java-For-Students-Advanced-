@@ -1,0 +1,14 @@
+
+Rather than have your SQL (as a PreparedStatement) in your Java code which must be
+sent across the network; we can have our SQL stored on the database in a "stored procedure".
+
+SQL can be stored in the database as stored procedures. This reduces network traffic.
+
+We use CallableStatement's when we working with stored procedures.
+
+We do not need to be able to read/write stored procedures but we must know how to call/execute them.
+
+In addition to having no parameters, a stored procedure can specify the following parameters:
+    -> IN - an input parameter
+    -> OUT - an output parameter
+    -> INOUT - a parameter that serves for both input and output

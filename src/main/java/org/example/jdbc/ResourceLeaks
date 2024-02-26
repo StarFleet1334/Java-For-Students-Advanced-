@@ -1,0 +1,12 @@
+
+
+Database resources are expensive to create so make sure you close them when finished.
+
+try-with-resources is very helpful here as it automatically closes resources for us.
+
+The order is important:
+1. ResultSet
+2. PreparedStatement or CallabelStatement
+3. Connection
+
+-> try-with-resources closes resources automatically, in the reverse order from which they were initialized
