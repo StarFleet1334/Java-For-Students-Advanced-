@@ -1,0 +1,17 @@
+
+Both PreparedStatement and CallableStatement are sub interfaces of Statement.
+We will talk about CallableStatement later; for the moment we will focus on PreparedStatement;
+
+A PreparedStatement enables us to execute SQL statements
+
+-> Use the Connection object to get a PreparedStatement.
+Once we have the PreparedStatement we can now run the SQL.
+
+Type type of SQL statement determines the way you run it.
+
+
+-> SELECT
+    - ResultSet rs = ps.executeQuery();
+
+-> INSERT,UPDATE,DELETE
+    int rowsAffected = ps.executeUpdate()
