@@ -1,4 +1,4 @@
-package lets_get_certified.lvti;
+package org.example.LVTI;
 
 import java.util.ArrayList;
 import java.util.List;
