@@ -1,0 +1,12 @@
+
+
+Private interface methods:
+
+-> Introduced in Java 9, interfaces can now have private methods.
+-> This private methods can be both static and non-static
+-> As they are private, they are accessible withing the interface only.
+-> As with classes, you cannot access a non-static interface method from a static method.
+
+They have two advantages:
+1. reduce code duplication
+2. improve code encapsulation.
