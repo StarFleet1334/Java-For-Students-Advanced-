@@ -1,0 +1,8 @@
+
+
+-> Java is a strongly-typed language; you must specify tye type of a variable when introducing it.
+
+-> However, since Java 10, we have the option, in certain scenario, of using the keyword var
+instead of the type. In these situations, the compiler infers the type var x = "abc" as x is a String
+
+-> Remember that the variables must be local and must be initialised on the line where they are declared.
