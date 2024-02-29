@@ -1,8 +1,5 @@
 
 
-
-
-
                             Sealed Classes
 
 
@@ -19,3 +16,5 @@ class cannot become a super type at all.
 a classes' subtypes.
 
 -> Also works with interfaces ( we can define what classes implement the interface)
+
+-> All sealed sub-classes must be sealed,non-sealed or final
