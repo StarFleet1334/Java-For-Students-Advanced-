@@ -1,0 +1,21 @@
+-> MetaData is information about information
+
+-> Annotations, via metadata, enable us to add value to our code.
+
+-> We can annotate (assign metadata) to classes,methods,variables etc...
+
+-> Though optional, when used they must be used correctly.
+
+-> Annotations operate much like interfaces. In fact, their origins are interfaces.
+Their "elements" look like abstract methods. This will be clearer when we look at examples.
+
+-> Annotation names are case sensitive; however it is common to practice to start the name
+with an uppercase letter.
+
+Example:
+    @Override
+    public String toString() {
+        return "....";
+    }
+
+-> Like interfaces, annotations can be applied to unrelated class
