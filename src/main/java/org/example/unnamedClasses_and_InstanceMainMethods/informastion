@@ -1,0 +1,31 @@
+
+-> Java supports both "programming in the small" (variables,methods,control flow etc...)
+and "programming in the large" (classes,interfaces,packages,modules etc...)
+
+
+-> The goal is to focus on the "programming in the small" by reducing ceremony/scaffolding
+for those learning the language.
+
+-> Constructs such as classes, access modifiers such as public and keywords such as static relate
+to "programming in the large" and should only be encountered when required.
+
+void main() {
+    System.out.println("Hello World from unnamed class");
+}
+1. this extend from Object and cannot implement any interface
+2. are final and reside in unnamed package
+3. for example if the above code is in HelloWorld.java, HelloWorld.class
+is created on the hard disk
+
+
+
+-> Unnamed classes:
+    -> are exactly like normal classes except that an unnamed class has
+    only one constructor - the default no-args constructor provided by
+    the compiler.
+    -> It is an error to explicitly code a constructor, even a no-args constructor
+    -> the this keyword is still valid.
+    -> instances of an unnamed class cannot be constructed directly.
+    -> therefore,such classes are useful for standalone programs or as an entry-point
+    to a program.
+    -> as a result, unnamed classes must have a main() method.
