@@ -1,0 +1,27 @@
+
+
+-> Sequenced Collections establish new interfaces for collections with a defined encounter oder:
+
+-> Java's Collections framework is neither straightforward or consistent
+
+-> List and Dequeue define an encounter order but their common supertype, Collection does not.
+
+-> Set does not define an encounter order, and neither does its subtype HashSet; but other subtypes
+do, such as SortedSet( sorted) and LinkedHashSet( insertion-order )
+
+
+-> Iterating the elements in a collection from first to last is fine.
+    - for example: enhanced-for loop, use an iterator or stream()
+
+-> However, iterating in reverse order is a different matter.
+    - NavigableSet provides a descendingSet()
+    - Deque provides descendingIterator()
+    - List provides ListIterator
+    - LinkedHashSet provides no support (one must copy its elements into another collection)
+
+
+-> In JEP 431, new interfaces are defined for sequenced collections, sequenced sets and sequenced maps.
+
+-> APIs are defined for accessing first/last elements and also for processing elements in reverse order.
+
+-> All of the methods in the interfaces have default implementations.
