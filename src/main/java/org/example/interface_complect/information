@@ -1,0 +1,30 @@
+
+------ 13 Rules about Interfaces in Java
+
+1. Fields in an interface are public,static and final implicitly.
+
+2. Methods in an interface are public implicitly
+
+3. A class can implement multiple interfaces.
+
+4. The Overriding methods cannot have more restrict access specifiers
+    (because methods in interface are public implicitly.)
+
+5. Non-abstract classes must override all methods declared in the super interfaces.
+
+6. Abstract classes are not forced to override all methods from their super interfaces.
+The first concrete class in the inheritance tree must override all methods
+
+7. An Interface cannot extend another class
+
+8. An Interface can extend from multiple interfaces
+
+9. An interface can be nested within a class
+
+10. An interface can be nested within another interface.
+
+11. Methods in an interface cannot be static and final
+
+12. Since Java 8, an interface can have default methods and static methods.
+
+13. Functional interface is an interface that has only one method.
