@@ -1,0 +1,66 @@
+
+                        Type Patterns
+
+
+In Java 16, instanceof was extended to take a type pattern and perform
+matching. This simplified the instanceof-and-cast idiom, resulting in more
+concise and less error-prone code
+
+// old pre-hava 16 instanceof-and-cast idiom
+
+if (obj instanceof String) {
+    String s = (String) obj;
+    System.out.println(s.toUpperCase());
+}
+
+
+// new post java 16 idiom
+
+String s is called "type pattern"
+
+if (obj instanceof String s) {
+    System.out.println(s.toUpperCase());
+}
+
+As there is no casting with type patterns, the style is more declarative.
+
+
+
+                        Pattern Matching
+
+Pattern matching is done at runtime.
+If the patter matches, then the instanceof expression is true
+and the pattern variable 's' not refers to whatever 'obj' refers to
+
+
+                        Records
+
+-> Records are special type of class that saves us a lot of boilerplate code.
+They are considered "data carriers" and are immutable.
+
+-> Records are specified using a record declaration where you specify the
+"components" of the record.
+
+-> These components become final instance variables and accessor methods
+having the same names as the components are provided automatically.
+
+-> In addition, a (canonical) constructor, toString(), equals() and hashCode()
+methods are generated.
+
+
+
+                        Records Patterns
+
+
+-> Code that receives an instance of a record class, typically extracts the
+data (components), using the built-in component accessor methods
+
+-> A "record pattern" consists of a type, a component pattern list (which may
+be empty) and an optional identifier.
+
+
+-> A record pattern does two things for us:
+    - checks if an object passes the instanceof test.
+    - disaggregates the record instance into its components.
+
+-> Record patterns support nesting.
