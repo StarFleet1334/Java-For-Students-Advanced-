@@ -1,0 +1,22 @@
+
+-> Patter matching for switch statements and expression was first introduced as a preview feature in
+Java 17.
+
+-> Now, Java 21 finalizes the feature.
+
+-> switch is a very natural fir for pattern matching. Recall that pattern matching removes
+the need for the instancof-and-cast idiom.
+
+-> Other changes, such as when clause,were motivated by the desire to separate the case labels,
+patterns and conditional logic from the business logic.
+
+-> Changes include:
+    - case labels can include patterns and null
+    - case labels can include optional when clauses ("guards")
+    - selector expression types broadened
+    - enum constant case labels improved
+        - qualified enum constants now allowed
+
+-> Label "dominance"
+    - analogouse to the catch clauses in a try statement
+        - unreachable code
