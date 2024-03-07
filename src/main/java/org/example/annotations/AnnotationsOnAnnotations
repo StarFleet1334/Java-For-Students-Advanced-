@@ -15,3 +15,18 @@ may want your annotation information included in Javadoc documentation
 
  -> limits the types that the annotation can be applied to.
  -> The types are specified as an array of ElementType enum values
+
+
+                            @Retention
+
+-> In generics, we encountered "type erasure" when certain information is discarded by the
+compiler when converting source code into .class file.
+
+-> Similarly annotations may be discarded at compile time, at runtime or not at all.
+We can control when this happens by using the @Retention
+
+    - SOURCE -> Source file only, compiler discards it.
+    - CLASS -> Stored in the .class file but not available at runtime. This is
+                the default compiler behaviour.
+    - RUNTIME -> Stored in the .class and available at runtime (via reflection)
+
