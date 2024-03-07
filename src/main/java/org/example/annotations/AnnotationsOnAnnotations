@@ -1,0 +1,17 @@
+
+
+-> There are annotations that can be applied to annotations.
+
+-> As opposed to applying built-in annotations to types
+    (methods,interfaces,fields etc..); we can actually apply built-in annotations
+    to annotations themselves.
+
+
+-> For example, you might want to limit where your annotation can be used or you
+may want your annotation information included in Javadoc documentation
+
+
+                            @Target
+
+ -> limits the types that the annotation can be applied to.
+ -> The types are specified as an array of ElementType enum values
