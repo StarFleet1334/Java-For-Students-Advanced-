@@ -1,0 +1,14 @@
+
+
+
+                           Injection Attacks
+
+-> SQL Injection
+    - where user input retrieves unexpected results.
+    - protection provided by PreparedStatement with bind variables (and not Statement)
+
+-> Command Injection
+    - where operating system commands are used to retrieve unexpected results.
+    - protection provided via input validation using a whitelist and/or
+    security policies (applying the principle of "least privilege" ).
+        - applying together provides "defence in depth"

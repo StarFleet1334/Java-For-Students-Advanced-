@@ -1,0 +1,12 @@
+
+
+                    Denial of Service (DoS) Attacks
+
+
+ -> A denial of service attack is where one or more requests are made with the purpose of
+    disrupting services.
+
+ -> This can be accomplished in a number of ways:
+    - leaking resources - always use try-with-resources to ensure you do not leak resources
+    - working with extremely large files - check the file size.
+    - inclusion attacks - where a file contains several other files e.g. "zip bomb".

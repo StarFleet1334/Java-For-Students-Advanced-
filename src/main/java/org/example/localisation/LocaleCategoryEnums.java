@@ -10,7 +10,7 @@ import java.util.Locale;
  *  and formatting are set automatically.
  *
  *  We can set these options individually ourselves using the Locale.Category enums: DISPLAY and FORMAT.
- *      - DISPLAY - relates to display information
+ *      - DISPLAY - relates to display security_info
  *      - FORMAT - formatting currencies, dates and numbers.
  *
  */

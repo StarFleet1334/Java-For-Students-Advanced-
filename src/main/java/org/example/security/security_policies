@@ -1,0 +1,14 @@
+
+
+                            Security Policies
+  -> Can be used in addition to or instead of a, whitelist to prevent
+  command injection attacks.
+
+
+  -> if both are applied then this creates a layered approach called "defence in depth"
+
+  -> Be careful that the policy obeys the "principle of least privilege".
+
+  -> In other words, if your program only needs to read a file, then it should only have read
+  permission and not have write access.
+

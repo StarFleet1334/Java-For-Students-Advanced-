@@ -1,0 +1,23 @@
+
+            Ensuring Data Integrity
+
+
+ -> Accessibility
+    - limits access as much as possible - "principle of least privilege"
+    - instance variables / methods should be private.
+
+ -> Restrict extensibility
+    - prevent subclassing by marketing the class as final.
+
+ -> Immutable objects are objects that cannot be changed after creation.
+ -> They are secure objects and use the following guidelines:
+    - Do not provide any "setter" methods.
+    - make all the fields private and final.
+    - Prevent subclassing (prevents overriding):
+        a) make the class final
+        b) make the constructor private and provide public static factory method
+                "createNewInstance"
+    - Instance fields:
+        a) immutable types e.g String, ok
+        b) mutable types e.g. StringBuilder, do not share references
+        i.e use "defensive copying" and "advanced encapsulation"
