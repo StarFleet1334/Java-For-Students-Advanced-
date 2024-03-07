@@ -1,0 +1,23 @@
+
+
+
+-> As stated earlier, annotations have a lot in common with interfaces;
+   for example, a marker annotation has no elements
+   (a marker interface has no methods). Annotations,as with interfaces, can be applied to
+   unrelated classes.
+
+-> In fact, we annotate out annotation with @interface.
+    - public @interface MyAnnotation {} // marker annotation
+
+
+-> An annotation element is an attribute of the annotation. The elements (attributes)
+can have values.
+
+Example:
+    public @interface MyAnnotation {
+        int myElement(); // looks like an abstract method!
+    }
+
+-> Remember that annotation have their origins in interfaces.
+    Essentially, the JVM translates the above element into an interface method and
+    the annotation itself as an implementation of the interface
