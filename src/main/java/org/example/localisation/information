@@ -1,0 +1,24 @@
+
+                    Resource Bundles
+
+1. Resource bundles contain locale-specific data.
+
+2. They take the format of a map with keys and values. The
+   values are locale-specific.
+
+3. Resource bundles can be created in 2 ways:
+    - java files -> extend ListResourceBundle
+    - property files -> text files with key value pairs
+
+
+
+                    Property files:
+
+ 1. Simple text files in the format of key=value pairs ( or key:value pairs).
+    The property files therefore, follow very specific naming conventions.
+    Keys and values are both Strings e.i. Map<String,String>
+
+ 2. The suffix is .properties
+
+ 3. ResourceBundle.getBundle(name,[locale]) loads the relevant property file.
+
